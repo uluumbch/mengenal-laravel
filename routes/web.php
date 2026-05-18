@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TugasController;
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/halo', function () {
+    return view('halo', ['nama' => 'Siswa SMK']);
 });
+
+Route::resource('tugas', TugasController::class);
